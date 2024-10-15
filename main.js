@@ -22,7 +22,7 @@ camera.position.set(4, 5, 11);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
-controls.minDistance = 5;
+controls.minDistance = 0;
 controls.maxDistance = 40;
 controls.minPolarAngle = 0.5;
 controls.maxPolarAngle = 1.5;
@@ -50,8 +50,8 @@ scene.add(spotLight);
 
 
 
-const loader = new GLTFLoader().setPath('public/tableasset/');
-loader.load('table-asset.gltf', (gltf) => {
+const loader = new GLTFLoader().setPath('public/mix-table/');
+loader.load('separ-model.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
